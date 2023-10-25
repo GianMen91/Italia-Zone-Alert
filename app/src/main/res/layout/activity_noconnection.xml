@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/retry"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="85dp"
+        android:textAlignment="center"
+        android:text="@string/connection_error"
+        android:textSize="20dip"
+        android:gravity="center_horizontal" />
+
+
+    <Button
+        android:id="@+id/retry"
+        android:layout_width="100dip"
+        android:layout_height="60dip"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:text="@string/retry"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
