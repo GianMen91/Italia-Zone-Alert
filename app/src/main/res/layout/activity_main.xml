@@ -5,24 +5,7 @@
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/textRulesNotActive"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rules_not_available"
-        android:textAlignment="center"
-        android:layout_marginTop="26dp"
-        android:layout_gravity="center"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="10dp"
-        android:textColor="#4d4949"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="26dp"
-        />
-
-    <TextView
+      <TextView
         android:id="@+id/textRulesActive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,11 +15,23 @@
         android:layout_gravity="center"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:textColor="#4d4949"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="26dp"
         />
+
+    <ImageView
+        android:id="@+id/whiteMap"
+        android:visibility="gone"
+        android:layout_marginLeft="20dp"
+        android:layout_width="366dp"
+        android:layout_height="433dp"
+        android:alpha="0.4"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/map_of_italy_without_covid" />
+
 
     <WebView android:id="@+id/webView"
         android:layout_width="match_parent"

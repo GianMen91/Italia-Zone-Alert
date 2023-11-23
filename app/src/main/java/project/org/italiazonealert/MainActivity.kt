@@ -11,6 +11,7 @@ import android.view.MenuItem
 import android.view.View
 import android.webkit.JavascriptInterface
 import android.webkit.WebView
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -23,16 +24,19 @@ class MainActivity : AppCompatActivity() {
     private lateinit var progressDialog: ProgressDialog
     private lateinit var webView: WebView
     private lateinit var textRulesActive: TextView
-    private lateinit var textRulesNotActive: TextView
     private lateinit var lastupdate: String
+    private lateinit var imageView: ImageView
+
+
 
     @SuppressLint("SetJavaScriptEnabled", "AddJavascriptInterface")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         webView = findViewById(R.id.webView)
+        imageView = findViewById(R.id.whiteMap)
+
         textRulesActive = findViewById(R.id.textRulesActive)
-        textRulesNotActive = findViewById(R.id.textRulesNotActive)
         val file = SaveDataOnDevice.readFromInternalStorage(applicationContext)
         if (isNetworkConnected) {
             map = ""
@@ -145,9 +149,10 @@ ${getString(R.string.fromDate)} $lastupdate)"""
                     "about:blank"
                 )
             }else{
-                textRulesActive.visibility = View.GONE
+                textRulesActive.text = applicationContext.getString(R.string.rules_not_available)
                 webView.visibility = View.GONE
-                textRulesNotActive.visibility = View.VISIBLE
+                imageView.visibility = View.VISIBLE
+
             }
 
         }
