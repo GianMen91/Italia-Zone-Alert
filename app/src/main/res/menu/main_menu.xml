@@ -14,12 +14,6 @@
         android:visible="true" />
 
     <item
-        android:id="@+id/links"
-        android:showAsAction="always"
-        android:title="@string/links"
-        android:visible="true" />
-
-    <item
         android:id="@+id/shareit"
         android:showAsAction="always"
         android:title="@string/with_friend"

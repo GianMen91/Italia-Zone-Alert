@@ -191,12 +191,6 @@ ${getString(R.string.fromDate)} $lastupdate)"""
                 true
             }
 
-            R.id.links -> {
-                val usefulLinksActivityIntent = Intent(this, UsefulLinksActivity::class.java)
-                startActivity(usefulLinksActivityIntent)
-                true
-            }
-
             R.id.shareit -> {
                 val googlePlayLink =
                     "https://play.google.com/store/apps/details?id=project.org.italiazonealert"
