@@ -68,7 +68,6 @@ class InfoActivityTest {
     }
 
 
-
     @Test
     fun mainTextHasClickableLinks() {
         onView(withId(R.id.mainText))
